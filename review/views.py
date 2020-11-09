@@ -37,11 +37,5 @@ class GetSentiment(APIView):
         return df.to_dict('records')
 
 
-def get_sentimen(request):
-    result = {}
-    if request.method == 'POST':
-        body = json.loads(request.body)
-        review = body['data']
-        result = get_prediction(review)
-    return HttpResponse(json.dumps(result, indent=2), content_type="application/json", status=status.HTTP_200_OK)
-# {data:['facilities good','bad service']}
+
+
