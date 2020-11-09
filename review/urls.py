@@ -1,7 +1,7 @@
 from django.urls import path
 
-from . import views
+from .views import GetSentiment
 
 urlpatterns = [
-    path('classify/', views.get_sentiment, name='index'),
+    path('classifiers/classify/', GetSentiment.as_view() , name='index'),
 ]
