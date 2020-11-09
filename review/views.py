@@ -17,7 +17,7 @@ def get_sentiment(request):
 
 
 def get_prediction(text_list):
-    model_path = 'static/review_ml_model/finalized_model.sav'    # need to change this
+    model_path = 'static/review/finalized_model.sav'    # need to change this
     if 'classifier' not in globals():
         classifier = pickle.load(open(model_path, 'rb'))
     text = pd.Series(text_list, name='text')
